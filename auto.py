@@ -13,13 +13,13 @@ while True:
     img = ImageGrab.grab()
     img.save('12.jpg')
     rgb_img = img.convert ('RGB')
-    r, g, b = rgb_img.getpixel((988, 410))
+    r, g, b = rgb_img.getpixel((988, 410))#自己调“确定”框所出现的像素位置
     print (r, g, b)
     print(r)
     print(type(r))
-    if r==8 and  g==128 and b==241:
+    if r==8 and  g==128 and b==241:#如果这个位置是淡蓝色【r==8 and  g==128 and b==241】则说明有确定框出现
         #print('Hello World')
-        pyautogui.moveTo(750, 315)
+        pyautogui.moveTo(988, 410)#自己可以调节点击“确定”的位置
         pyautogui.click()
     else:
         print('error')
